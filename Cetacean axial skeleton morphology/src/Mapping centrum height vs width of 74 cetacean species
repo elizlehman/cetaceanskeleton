@@ -1,0 +1,44 @@
+#Automation: mapping centrum height vs centrum width (using PCA/loop), multiple
+
+V=read.csv('Vertebral_shape1.csv')
+Measure=colnames(V)
+colnames(V)=NA
+s=princomp(na.omit(V[,-1]))$scores
+dim(s)
+plot(s)
+  #head(V)
+  
+for(i in 1:204){
+  W=read.csv(paste0('Vertebral_shape',i,'.csv'))
+  colnames(W)=NA
+  V=rbind(V,W,deparse.level=0)
+
+  x=na.omit(x)
+  princomp(x)$loadings
+  princomp(x)$scores
+  s=princomp(x)$scores
+  plot(s)
+  n=rownames(s)
+  n
+  plot(s,cex=1)
+  text(s,labels=n)
+  plot(s[,2:3],cex=0)
+  text(s[,2:3],labels=n)
+  plot(s[,2:3],cex=0)
+  text(s[,2:3],labels=n,col=pc)
+  
+pc=array(dim=length(s))
+pc[1:11]='red'
+pc[12:23]='blue'
+pc[24:31]='green'
+
+#Adding line and labels
+plot(s[,2:3],cex=0,xlab='Centrum height',ylab='Centrum width',cex.lab=1.2,bty='L')
+title('Centrum dimensions of Balaenoptera acutorostrata')
+points(s[,2:3],col='gray',pch=21,bg=pc)
+lines(s[,2:3])
+
+text(15,16,'Thoracic')
+text(15,1,'Lumbar')
+text(-20,0,'Caudal')
+}
