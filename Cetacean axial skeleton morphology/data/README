@@ -1,0 +1,17 @@
+Details on vertebral shape data:
+
+Each sheet corresponds to one specimen.
+Sheets are sorted alphabetically based on species names.
+
+For each specimen, its species name and museum collection number are noted in the first cell of the sheet (A1).
+
+Each row of the sheet correspond to a single vertebra with its number listed in the first column:
+T = Thoracic vertebrae, L = Lumbar vertebrae, Ca = Caudal vertebrae (anterior to fluke insertion).
+
+Each column of the sheet corresponds to a linear or vertebral measurement.
+Linear measurements are expressed in centimeters.
+Angular ones are in degrees (90∞ = perpendicular, <90 = anteriorly oriented, >90 = posteriorly oriented)
+For more details about measurements, see figure S1 of the Supplementary materials of the original publication.
+
+NA values correspond to broken parts of vertebrae or missing vertebrae.
+For neural spines inclination, transverse processes inclination and metapophyses height, NA were used when the corresponding apophyse was not present.
