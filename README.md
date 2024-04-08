@@ -1,4 +1,4 @@
-Cetacean Vertebral Shape Analysis
+Cetacean Vertebrae Analysis
 --
 Description
 -
