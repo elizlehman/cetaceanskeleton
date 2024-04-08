@@ -15,3 +15,7 @@ Analysis Methodology
 -
 - Measurements of each specimen's vertebrae are analyzed using principal component analysis (PCA) to identify patterns and variations in vertebral shape across species.
 - The effect of habitat type on vertebral counts are tested using phylogenetic ANOVA and MANOVA.
+
+License
+-
+- This work is licensed under a CC0 1.0 Universal (CC0 1.0) Public Domain Dedication license. 
