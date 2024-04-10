@@ -2,7 +2,7 @@ Cetacean Vertebrae Analysis
 --
 Description
 -
-This project analyzes vertebral shape data from 73 cetacean species using principal component analysis (PCA). This project's focus is on the patterns of vertebral morphology among various cetacean species and how this is associated with cetacean habitats. The results from this study may apply more broadly to our understanding of cetacean evolutionary pathways relative to their ecology and how these vertebral modifications may have operated as evolutionary advantages between smaller riverine, coastal, and oceanic cetacean species. 
+This project analyzes vertebral shape data from 73 cetacean species using principal component analysis (PCA). This project's focus is on the patterns of vertebral morphology among various cetacean species and how this is associated with their taxonomy. The results from this study may apply more broadly to our understanding of cetacean evolutionary pathways relative to their ecology and how these vertebral modifications may have operated as evolutionary advantages between smaller riverine, coastal, and oceanic cetacean species. 
 
  Analysis Source and Technologies
  -
