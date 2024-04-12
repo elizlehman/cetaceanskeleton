@@ -1,0 +1,41 @@
+#Mapping centrum lengths of adjacent T1 and T2 vertebrae across 73 cetacean species
+centrum=matrix(NA,41,204)
+F=read.csv('Specimen-Family.csv')[,2]
+Vertname=read.csv('Vertnames.csv')[,1]
+t1=array()
+t2=array()
+slope=array(dim=ncol(Vert1),dimnames=list(colnames(Vert1)))
+
+Vert1=matrix(NA,204,79,dimnames=list(1:204,Vertname[1:(length(Vertname)-1)]))
+Vert2=matrix(NA,204,79,dimnames=list(1:204,Vertname[2:length(Vertname)]))
+for(i in 1:204){
+  
+  filename <- paste0("Vertebral_shape", i, ".csv")
+  
+  x <- read.csv(filename, row.names = 1)
+  t1[i]=x[1,1]
+  t2[i]=x[2,1]
+  n=rownames(x)[rownames(x)%in%colnames(Vert1)]
+  Vert1[i,n]=x[n,1]
+  n=rownames(x)[rownames(x)%in%colnames(Vert2)]
+  Vert2[i,n]=x[n,1]
+  print(c(filename,nrow(x)))
+}
+for(i in 1:ncol(Vert1)){
+  slope[i]=fixef(lmer(Vert2[,i]~Vert1[,i]+(1|F)))[2]
+}
+
+#Comparison of centrum lengths between T1 and T2 vertebrae across 73 species/204 specimens
+plot(Vert1[,1],Vert2[,2],log='xy',xlab = 'Centrum length of T1 vertebra',ylab='Centrum length of T2 vertebra')
+title('Centrum length comparison of adjacent T1 and T2 vertebrae')
+
+
+----
+#Use this to see the changes in slope between specimens
+plot(slope,cex.lab=1.2,bty='L')
+
+
+#Finding significance
+summary(lmer(log(t2)~log(t1)+(1|F),data=data.frame(F,t1,t2)))
+rand(lmer(log(t2)~log(t1)+(1|F),data=data.frame(F,t1,t2)))
+r.squaredGLMM(lmer(log(t2)~log(t1)+(1|F),data=data.frame(F,t1,t2)))
