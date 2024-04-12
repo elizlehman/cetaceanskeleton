@@ -33,6 +33,7 @@ title('Centrum length comparison of adjacent T1 and T2 vertebrae')
 ----
 #Use this to see the changes in slope between specimens
 plot(slope,cex.lab=1.2,bty='L')
+title('Slopes between T1 and T2 vertebrae for 73 cetacean species')
 
 
 #Finding significance
