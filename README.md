@@ -12,7 +12,7 @@ This project analyzes vertebral shape data from 73 cetacean species using princi
 
 Analysis Methodology
 -
-- Measurements of each specimen's vertebrae are analyzed using principal component analysis (PCA) to identify patterns and variations in vertebral shape across species.
+- Measurements of each specimen's vertebrae are analyzed using PCA and GLMM to identify patterns and variations in vertebral shape across species.
 
 License
 -
