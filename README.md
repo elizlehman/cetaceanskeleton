@@ -6,13 +6,13 @@ This project analyzes vertebral shape data from 73 cetacean species using princi
 
  Analysis Source and Technologies
  -
- - RStudio for data processing: PCA analysis and GLMM
+ - RStudio for data processing: PCA analysis and linear regression
  - Original data sourced from DataDryad
  - Citation: Gillet, Amandine; Frederich, Bruno; Parmentier, Eric (2019). Data from: Divergent evolutionary morphology of the axial skeleton as a potential key innovation in modern cetaceans [Dataset]. Dryad. https://doi.org/10.5061/dryad.7dj6850
 
 Analysis Methodology
 -
-- Measurements of each specimen's vertebrae are analyzed using PCA and GLMM to identify patterns and variations in vertebral shape across species.
+- Measurements of each specimen's vertebrae are analyzed using PCA and linear regression to identify patterns and variations in vertebral shape across species.
 
 License
 -
